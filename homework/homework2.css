@@ -1,0 +1,34 @@
+body {
+    background-image: url("http://www.free-largeimages.com/wp-content/uploads/2015/11/Red_Background_02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+table {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    border-collapse: collapse;
+}
+th {
+    border-top: none;
+    border-right: 2px solid grey;
+    border-bottom: 5px solid grey;
+    border-left: none;
+    color: white;
+    background-color: rgba(6, 96, 34, 0.54);
+}
+td {
+    border-top: none;
+    border-right: 2px solid grey;
+    border-bottom: 5px solid grey;
+    border-left: none;
+    color: grey;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.white-cell {
+    background-color: white;
+    color: blue;
+}

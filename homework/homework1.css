@@ -1,0 +1,17 @@
+.center {
+    margin: auto;
+
+
+}
+div {
+    height: 300px;
+    width: 300px;
+    border: 15px solid black;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    box-sizing: border-box;
+    outline: 15px solid blue;
+    text-align: center;
+    padding: 90px 0;
+}
