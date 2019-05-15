@@ -1,14 +1,43 @@
 body, html {
     height: 100%;
+    margin: 0;
+}
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.45);
 }
 ul {
     width: 100%;
-    float: left;
-
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-.big-container {
+li {
+    float: left;
+    text-align: center;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+}
+li a:hover {
+    background-color: black;
+}
+.container1 {
     min-height: 100%;
     position: relative;
+}
+.content {
+    max-width: 900px;
+    height:100%;
+
+
 }
 .display-middle {
     position: absolute;
@@ -22,24 +51,10 @@ ul {
 .center {
     text-align: center;
 }
-
 .backimg {
     background-image: url("https://www.w3schools.com/w3images/wedding_couple.jpg");
     background-size: cover;
     background-position: center;
+}
+/*BEGIN navigation  bar*/
 
-}
-.navbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.45);
-}
-.navbar a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    width: 20%;
-}
