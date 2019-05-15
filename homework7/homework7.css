@@ -1,43 +1,72 @@
+* {
+    box-sizing: border-box;
+}
 body, html {
     height: 100%;
     margin: 0;
 }
+header {
+    margin: 0;
+}
+/*BEGIN navigation*/
 nav {
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.45);
 }
-ul {
+nav a:hover {
+    background-color: white;
+}
+nav ul {
     width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-li {
+nav li {
     float: left;
     text-align: center;
     width: 25%;
     box-sizing: border-box;
     padding: 10px;
 }
-li a {
+/*END navigation*/
+a {
     text-decoration: none;
-    color: white;
+    color: grey;
     padding: 10px 30px;
 }
-li a:hover {
+footer {
+    width: 100%;
     background-color: black;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+}
+.rounded {
+    border-radius: 5px;
+    margin: 30px 0;
+}
+.button {
+    border-radius: 5px;
+    background-color: black;
+    border: 1px solid transparent;
 }
 .container1 {
     min-height: 100%;
     position: relative;
 }
+
+.container2 {
+    padding: 65px;
+    margin: 0 auto;
+    background-color: #e5e4e4;
+}
 .content {
     max-width: 900px;
-    height:100%;
-
-
+    margin: 0 auto;
 }
 .display-middle {
     position: absolute;
@@ -48,13 +77,19 @@ li a:hover {
 .text-white {
     color: white;
 }
+.text-grey {
+    color: grey;
+}
 .center {
     text-align: center;
+    margin: 30px;
 }
 .backimg {
-    background-image: url("https://www.w3schools.com/w3images/wedding_couple.jpg");
     background-size: cover;
     background-position: center;
 }
-/*BEGIN navigation  bar*/
+.float {
+    float: left;
+    width: 50%;
+}
 
