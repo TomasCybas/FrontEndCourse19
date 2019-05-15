@@ -1,43 +1,104 @@
+* {
+    box-sizing: border-box;
+}
 body, html {
     height: 100%;
     margin: 0;
 }
+header {
+    margin: 0;
+}
+/*BEGIN navigation*/
 nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.45);
+    background-color: white;
+    padding: 10px;
+    opacity: 0.75;
 }
-ul {
-    width: 100%;
+nav:hover {
+    opacity: 1;
+}
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-li {
+nav li {
     float: left;
     text-align: center;
     width: 25%;
     box-sizing: border-box;
     padding: 10px;
+    color: grey
 }
-li a {
+nav li:hover {
+    background-color: grey;
+    color: black;
+}
+nav a {
+    color: inherit;
     text-decoration: none;
-    color: white;
-    padding: 10px 30px;
 }
-li a:hover {
+.rsvp:hover {
     background-color: black;
+    color: white
+}
+/*END navigation*/
+/*a{
+    text-decoration: none;
+    padding: 10px 30px;
+    color: white;
+}*/
+footer {
+    background-color: black;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+}
+.rounded {
+    border-radius: 5px;
+    margin: 30px 0;
+}
+a.button-black {
+    border-radius: 5px;
+    background-color: black;
+    border: 1px solid transparent;
+    text-decoration: none;
+    padding: 15px 30px;
+    color: white;
+}
+.button-black:hover {
+    background-color: grey;
+    color: black;
+}
+.button-red:hover {
+    background-color: grey;
+    color: black;
+}
+a.button-red {
+    border-radius: 5px;
+    background-color: pink;
+    border: 1px solid transparent;
+    text-decoration: none;
+    padding: 15px 30px;
+    color: white;
 }
 .container1 {
     min-height: 100%;
     position: relative;
 }
+
+.container2 {
+    padding: 65px;
+    margin: 0 auto;
+    background-color: #ffdddd;
+}
 .content {
     max-width: 900px;
-    height:100%;
-
-
+    margin: 0 auto;
 }
 .display-middle {
     position: absolute;
@@ -48,13 +109,19 @@ li a:hover {
 .text-white {
     color: white;
 }
+.text-grey {
+    color: grey;
+}
 .center {
     text-align: center;
+    margin: 30px;
 }
 .backimg {
-    background-image: url("https://www.w3schools.com/w3images/wedding_couple.jpg");
     background-size: cover;
     background-position: center;
 }
-/*BEGIN navigation  bar*/
+.float {
+    float: left;
+    width: 50%;
+}
 

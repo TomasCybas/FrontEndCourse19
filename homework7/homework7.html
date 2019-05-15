@@ -6,33 +6,89 @@
     <title>homework7</title>
 </head>
 <body>
-<header class="container1 backimg" id="home">
+<nav style="z-index:1">
+    <ul>
+        <li>
+            <a href="#home">Home</a>
+        </li>
+        <li>
+            <a href="#about_us">Jane & John</a>
+        </li>
+        <li>
+            <a href="#wedding">Wedding</a>
+        </li>
+        <li class="rsvp">
+            <a href="#rsvp">RSVP</a>
+        </li>
+    </ul>
+
+</nav>
+<header style="background-image: url('img/wedding_couple.jpg')" class="container1 backimg" id="home">
     <div class="display-middle text-white center">
         <h1>Jane & John</h1>
         <h2>Are getting married</h2>
         <h2><b>2017.08.08</b></h2>
     </div>
-
 </header>
-<div class="content">
+<div class="container2" id="about_us">
+    <div class="content">
+        <h1 class="center text-grey">Jane & John</h1>
+        <div>
+            <img class="rounded" src="img/wedding_couple2.jpg" alt="wedding_couple">
+        </div>
+        <div>
+            <p class="text-grey" style="text-align: justify"><i>You all know us. And we all know you. We are getting married lorem ipsum dolor sit
+                amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</i>
+            </p>
+            <br>
+            <p class="center"><a href="#wedding" class="button-black center">Wedding Details</a></p>
+        </div>
 
+    </div>
 </div>
-<nav>
-    <ul>
-        <li>
-            <a href="#">Home</a>
-        </li>
-        <li>
-            <a href="#">Jane & John</a>
-        </li>
-        <li>
-            <a href="#">Wedding</a>
-        </li>
-        <li>
-            <a href="#">RSVP</a>
-        </li>
-    </ul>
+<div style="background-image: url('img/flowers.jpg')" class="container1 backimg">
+    <div style="font-size:30px" class="display-middle text-white center">
+        <h1> You Are Invited</h1>
+        <h3>Of course..</h3>
+    </div>
+</div>
+<div class="container2" id="wedding">
+    <div style="overflow:hidden" class="content">
+        <h1 class="center text-grey">The Wedding</h1>
+        <div>
+            <img class="rounded" src="img/wedding_location.jpg" alt="wedding_location">
+        </div>
+        <div style="margin:0" class="float center">
+            <h2>When</h2>
+            <p>Wedding Ceremony - 2:00 PM</p>
+            <p>Reception & Dinner - 5:00 PM</p>
 
-</nav>
+        </div>
+        <div style="margin:0" class="float center">
+            <h2>Where</h2>
+            <p>Some place, an adress</p>
+            <p>Somewhere, some address</p>
+        </div>
+
+    </div>
+</div>
+<div style="background-color:#ffdddd" id="rsvp" class="container2">
+    <div class="center">
+        <h1 style="font-weight:200">HOPE YOU CAN MAKE IT</h1>
+        <p>Kindly Respond By January, 2017</p>
+        <br>
+        <p class="center"><a class="button-red center" href="#">RSVP</a></p>
+    </div>
+</div>
+<footer>
+    <p>Powered by w3.css</p>
+</footer>
+<div style="height:58px">
+</div>
 </body>
 </html>
