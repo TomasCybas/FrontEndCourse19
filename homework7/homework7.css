@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+}
+ul {
+    width: 100%;
+    float: left;
+
+}
+.big-container {
+    min-height: 100%;
+    position: relative;
+}
+.display-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.text-white {
+    color: white;
+}
+.center {
+    text-align: center;
+}
+
+.backimg {
+    background-image: url("https://www.w3schools.com/w3images/wedding_couple.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.45);
+}
+.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    width: 20%;
+}

@@ -1,10 +1,10 @@
 body, html {
     height: 100%;
+    margin: 0;
 }
 .container {
     position: relative;
     height: 100%;
-
 }
 .a {
     float: left;
@@ -15,7 +15,6 @@ body, html {
     border: 5px solid white;
     box-sizing: border-box;
 }
-
 .b {
     float: left;
     width: 25%;
@@ -24,7 +23,6 @@ body, html {
     border: 5px solid white;
     box-sizing: border-box;
 }
-
 .c {
     float: left;
     width: 25%;
@@ -32,7 +30,7 @@ body, html {
     background-color: yellow;
     border: 5px solid white;
     box-sizing: border-box;
-    overflow: scroll;
+    overflow-y: auto;
 }
 .d {
     float: left;
@@ -67,7 +65,7 @@ body, html {
     height: calc(100% - 240px);
     border: 5px solid white;
     box-sizing: border-box;
-    overflow: scroll;
+    overflow-y: auto;
 }
 .h {
     position: absolute;
@@ -78,10 +76,8 @@ body, html {
     background-color: orange;
     border: 5px solid white;
     box-sizing: border-box;
-    overflow: scroll;
-
+    overflow-y: auto;
 }
-
 .i {
     position:absolute;
     bottom:0;
