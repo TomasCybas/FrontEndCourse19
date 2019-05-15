@@ -1,10 +1,10 @@
 body, html {
     height: 100%;
+    margin: 0;
 }
 .container {
     position: relative;
     height: 100%;
-
 }
 .a {
     float: left;
@@ -12,33 +12,32 @@ body, html {
     height: 60px;
     background-color: green;
     text-align: center;
-    border: 1px solid black;
+    border: 5px solid white;
     box-sizing: border-box;
 }
-
+.b {
     float: left;
     width: 25%;
     height: 60px;
     background-color: red;
-    border: 1px solid black;
+    border: 5px solid white;
     box-sizing: border-box;
 }
-
 .c {
     float: left;
     width: 25%;
     height: calc(100% - 120px);
     background-color: yellow;
-    border: 1px solid black;
+    border: 5px solid white;
     box-sizing: border-box;
-    overflow: scroll;
+    overflow-y: auto;
 }
 .d {
     float: left;
     width: 50%;
     background-color: blue;
     height: 60px;
-    border: 1px solid black;
+    border: 5px solid white;
     box-sizing: border-box;
 }
 .e {
@@ -46,7 +45,7 @@ body, html {
     width: 50%;
     background-color: green;
     height: 60px;
-    border: 1px solid black;
+    border: 5px solid white;
     box-sizing: border-box;
 }
 .f {
@@ -56,7 +55,7 @@ body, html {
     width: 25%;
     background-color: black;
     height: 120px;
-    border: 1px solid black;
+    border: 5px solid white;
     box-sizing: border-box;
 }
 .g {
@@ -64,9 +63,9 @@ body, html {
     width: 50%;
     background-color: red;
     height: calc(100% - 240px);
-    border: 1px solid black;
+    border: 5px solid white;
     box-sizing: border-box;
-    overflow: scroll;
+    overflow-y: auto;
 }
 .h {
     position: absolute;
@@ -75,19 +74,17 @@ body, html {
     height: calc(100% - 240px);
     width: 25%;
     background-color: orange;
-    border: 1px solid black;
+    border: 5px solid white;
     box-sizing: border-box;
-    overflow: scroll;
-
+    overflow-y: auto;
 }
-
 .i {
     position:absolute;
     bottom:0;
     width:100%;
-    height:60px;   /* Height of the footer */
+    height:60px;
     background:#6cf;
-    border: 1px solid black;
+    border: 5px solid white;
     box-sizing: border-box;
 }
 .b {
