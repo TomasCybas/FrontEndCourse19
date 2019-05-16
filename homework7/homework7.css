@@ -25,6 +25,9 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+li a {
+    display: block;
+}
 nav li {
     float: left;
     text-align: center;
