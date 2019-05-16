@@ -140,7 +140,7 @@ nav li a:hover {
     padding: 11px 9px 11px 10px;
 }
 .slider-container {
-    height: 450px;
+    height: 460px;
     border-bottom: 10px solid #e9e9e9;
     background: #f1f1f1;
 
@@ -150,6 +150,23 @@ nav li a:hover {
     padding-left: 20px;
     width: 410px;
 }
+.slider-text-block h2 {
+    font-size: 36px;
+    font-weight: normal;
+}
+.slider-text-block p {
+    font-weight: normal;
+    font-size: 16px;
+}
 .slider-image-block {
-    
+    float: right;
+    padding-top: 10px;
+}
+.button-small {
+    padding: 10px;
+    background: #0099ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
 }
