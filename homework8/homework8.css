@@ -13,6 +13,12 @@ header {
 .clearfix {
     overflow:hidden;
 }
+.center-vertically {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
 .content {
     max-width: 1000px;
     margin: 0 auto;
