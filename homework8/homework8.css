@@ -80,6 +80,7 @@ nav {
     padding-right: 20px;
     width: 100%;
     overflow: hidden;
+    margin-bottom: -5px;
 }
 nav ul {
     margin: 0;
