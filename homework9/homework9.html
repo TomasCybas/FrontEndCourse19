@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework10</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            margin: 0 auto;
+        }
+        textarea {
+            width: 50%;
+            resize: none;
+            height: 60px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: transparent;
+            border-radius:5px;
+        }
+        input {
+            width: 50%;
+            clear: left;
+            border: transparent;
+            border-radius: 5px;
+        }
+        input[type=submit] {
+            width: 100%;
+        }
+        .container {
+            background: #f2f2f2;
+            overflow: hidden;
+            border-radius: 5px;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>Elegant Contact Form</h3>
+    <form style="position: relative">
+        <input type="text" placeholder="Name" id="name">
+        <input type="email" placeholder="Email address" id="email">
+        <input type="text" placeholder="Subject" id="subject">
+        <textarea placeholder="Message" id="message"></textarea>
+        <input type="submit" id="submit">
+    </form>
+
+</div>
+
+</body>
+</html>
