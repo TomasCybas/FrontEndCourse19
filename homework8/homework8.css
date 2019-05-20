@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+    color: #0099ff;
+}
 html, body {
     height: 100%;
     margin:0 auto;
@@ -9,6 +13,10 @@ html, body {
 header {
     max-height: 284px;
     border-bottom: 5px solid #e9e9e9;
+}
+footer {
+    border-top: 5px solid black;
+    background: #2e2e2e;
 }
 .clearfix {
     overflow:hidden;
@@ -181,7 +189,7 @@ nav li a:hover {
     font-size: 16px;
 }
 .intro-container {
-    height: 506px;
+    height: 505px;
     background: #ffffff;
     padding-top: 39px;
 }
@@ -190,13 +198,14 @@ nav li a:hover {
     float: left;
     width: 470px;
     padding-right:10px;
+    height: 100%;
 }
 .intro-right {
     margin-right: 20px;
     padding-left:10px;
     float: right;
     width: 470px;
-    height: 426px;
+    height: 100%;
 }
 .intro-right-block {
     margin: 0;
@@ -216,4 +225,73 @@ nav li a:hover {
     font-weight: normal;
     color: #0099ff;
     text-align: center;
+}
+.shout-container {
+    height: 160px;
+    margin: 0 20px 40px 20px;
+}
+.shout {
+    background: #e0e0e0;
+    border-left: 10px solid #0099ff;
+}
+.button-big {
+    padding: 10px 20px;
+    background: #0099ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 26px;
+}
+.bottom-container {
+    height: 380px;
+    margin: 0 20px 0 20px;
+    border-bottom: 1px solid #2d2d2d;
+}
+.about-us {
+    float: left;
+    padding: 0 10px 0 0;
+    width: 25%;
+}
+.quick-links {
+    float: left;
+    padding: 0 10px 10px;
+    width: 25%;
+}
+.latest-blog-posts {
+    float: left;
+    padding: 0 10px 10px;
+    width: 25%;
+}
+.contact-us {
+    float: left;
+    padding: 0 0 0 10px;
+    width: 25%;
+}
+h5 {
+    color: #ffffff;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.about-us p {
+    color: #666666;
+    font-size: 12px;
+    font-weight: normal;
+}
+.quick-links ul {
+    list-style: none;
+
+}
+.quick-links ul li {
+    color: #0099ff;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 5px 0;
+    border-bottom: 1px solid #232323;
+}
+.copyright {
+    background: #222222;
+    color: #666666;
+    padding: 25px 20px;
 }
