@@ -80,22 +80,6 @@ footer {
 .social li a:hover {
     color: red;
 }
-/*.fas {
-    text-decoration: none;
-    font-size: 32px;
-    text-align: center;
-    border: transparent;
-    color: #787878;
-    background: #ffffff;
-}
-.fab {
-    text-decoration: none;
-    font-size: 32px;
-    text-align: center;
-    color: #787878;
-    background: #ffffff;
-}*/
-/*END topbar*/
 
 
 /*BEGIN navigation*/
@@ -322,6 +306,17 @@ h5 {
     margin-bottom: 10px;
     font-size: 13px;
     color: #989898;
+}
+.contact-us input[type="submit"] {
+    padding: 10px;
+    background: #0099ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    width: 33.3%;
+    font-family: "Georgia", serif;
+
 }
 .contact-us textarea {
     width: 100%;
