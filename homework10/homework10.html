@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Homework10</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            margin: 0 auto;
+        }
+        input {
+            display: block;
+        }
+        .container {
+            height: 100%;
+            width:600px;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            background: grey;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
 <form>
-    
+    <input type="text" id="title" placeholder="Choose or enter your own">
+    <input type="text" placeholder="Name>">
+    <input type="tel" placeholder="+1 23456789">
+    <input type="email" placeholder="your@email.com">
+    <input type="url" placeholder="www.yoursite.com">
+    <input type="number" min="1" max="10" step="1">
+    <input type="range" min="0" max="1" step="0.1">
+    <input type="date" min="2010-12-16">
+    <input type="time">
+    <input type="color">
+    <input type="submit">
+    <input type="search">
+
+
 </form>
+</div>
 </body>
 </html>
