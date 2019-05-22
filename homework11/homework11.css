@@ -27,6 +27,9 @@ html, body {
         font-size: 36px;
         font-weight: normal;
     }
+    p {
+        font-size: 36px;
+    }
     a {
         text-decoration: none;
     }
