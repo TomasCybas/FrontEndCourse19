@@ -41,7 +41,7 @@ html, body {
     .backimg {
         background-image: url("img/background_main.jpg");
         background-size: cover;
-        min-height: 90%;
+        height: 90%;
     }
     .display-center {
         position: absolute;
