@@ -19,6 +19,14 @@ html, body {
         font-size: 60px;
         font-weight: bold;
     }
+    h2 {
+        font-size: 60px;
+        font-weight: normal;
+    }
+    h3 {
+        font-size: 36px;
+        font-weight: normal;
+    }
     a {
         text-decoration: none;
     }
@@ -38,14 +46,29 @@ html, body {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    .display-bottom-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .padding-black {
+        padding: 8px 8px;
+        background: black;
+    }
     .text-center {
-        text-align: center
+        text-align: center;
+    }
+    .text-right {
+        text-align: right;
     }
     .text-white {
         color: white;
     }
     .text-black {
         color: black;
+    }
+    .text-grey {
+        color: grey;
     }
     .text-grey {
         color: #757575;
@@ -58,6 +81,46 @@ html, body {
     }
     .button {
         padding: 8px 16px;
+    }
+    .container-2 {
+        width: 100%;
+        position:relative;
+        padding: 64px 8px;
+    }
+    .bg-black {
+        background: black;
+    }
+    .content {
+        max-width: 980px;
+        margin:0 auto;
+    }
+    .menu-nav {
+        width: 100%;
+    }
+    .menu-nav a:hover {
+        background: red;
+
+    }
+    .menu-tab {
+        width: 33.3%;
+        padding: 12px 24px;
+        float: left;
+        font-size: 24px;
+    }
+    .border {
+        border: 1px solid grey;
+    }
+    .menu-container {
+        padding: 32px 16px;
+        background: white;
+    }
+    .tag {
+        background: grey;
+        padding: 8px;
+        color: white;
+        border-radius: 5px;
+        float: right;
+        text-align: center;
     }
 }
 
