@@ -9,11 +9,27 @@
 
 </head>
 <body>
-<header class="backimg container">
+<div id="top-bar" style="z-index: 1;">
+    <ul>
+        <li>
+            <a href="#home">Home</a>
+        </li>
+        <li>
+            <a href="#menu">Menu</a>
+        </li>
+        <li>
+            <a href="#about-us">About</a>
+        </li>
+        <li>
+            <a href="#contact-us">Contact</a>
+        </li>
+    </ul>
+</div>
+<header id="home" class="backimg container">
     <div style="width:100%" class="display-center text-center">
         <h1 class="text-white">THIN <br> CRUST PIZZA</h1>
         <div class="text-white text-center">
-            <a href="#menu" class="button black text-white button-font-size">Let me see the menu</a>
+            <a href="#menu" class="button bg.black text-white">Let me see the menu</a>
         </div>
     </div>
     <div style="padding: 8px 16px;" class="display-bottom-left">
@@ -146,6 +162,8 @@
         var marker = new google.maps.Marker({position: kmtp, map: map})
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMRwSLQj4XSMvVssjgRoLOvX3_vmRUHSc&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMRwSLQj4XSMvVssjgRoLOvX3_vmRUHSc&callback=myMap">
+
+</script>
 </body>
 </html>
