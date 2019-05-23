@@ -98,23 +98,9 @@
             </div>
         </div>
     </div>
-
-
 </div>
 <!--LOCATION-->
 <div id="googleMap" class="googlemaps">
-    <script>
-        function myMap() {
-            var mapProp = {
-                center: new google.maps.LatLng(55.724453, 21.126722),
-                zoom: 15
-            };
-            var kmtp = {lat: 55.724453, lng: 21.126722};
-            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-            var marker = new google.maps.Marker({position: kmtp, map: map})
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMRwSLQj4XSMvVssjgRoLOvX3_vmRUHSc&callback=myMap"></script>
 </div>
 <div id="contact-us" class="container-2 bg-blue">
     <div class="content text-white">
@@ -149,5 +135,17 @@
 <footer class="container-2 bg-black text-white text-center">
     <h3>Powered by w3.css</h3>
 </footer>
+<script>
+    function myMap() {
+        var mapProp = {
+            center: new google.maps.LatLng(55.724453, 21.126722),
+            zoom: 15
+        };
+        var kmtp = {lat: 55.724453, lng: 21.126722};
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        var marker = new google.maps.Marker({position: kmtp, map: map})
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMRwSLQj4XSMvVssjgRoLOvX3_vmRUHSc&callback=myMap"></script>
 </body>
 </html>
