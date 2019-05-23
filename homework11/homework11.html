@@ -34,42 +34,120 @@
         <div class="menu-container clearfix">
             <h3 class="clearfix">
                 <b>Margherita</b>
-                <span class="tag">$12.50</span>
+                <span class="tag right">$12.50</span>
             </h3>
             <p class="text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
             <hr>
             <h3 class="clearfix">
                 <b>Margherita</b>
-                <span class="tag">$12.50</span>
+                <span class="tag right">$12.50</span>
             </h3>
             <p class="text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
             <hr>
             <h3 class="clearfix">
                 <b>Margherita</b>
-                <span class="tag">$12.50</span>
+                <span class="tag right">$12.50</span>
             </h3>
             <p class="text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
             <hr>
             <h3 class="clearfix">
                 <b>Margherita</b>
-                <span class="tag">$12.50</span>
+                <span class="tag right">$12.50</span>
             </h3>
             <p class="text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
             <hr>
             <h3 class="clearfix">
                 <b>Margherita</b>
-                <span class="tag">$12.50</span>
+                <span class="tag right">$12.50</span>
             </h3>
             <p class="text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
             <hr>
             <h3 class="clearfix">
                 <b>Margherita</b>
-                <span class="tag">$12.50</span>
+                <span class="tag right">$12.50</span>
             </h3>
             <p class="text-grey">Fresh tomatoes, fresh mozzarella, fresh basil</p>
         </div>
     </div>
 
 </div>
+<div id="about-us" class="container-2 bg-red">
+    <div class="content text-white">
+        <h2 class="text-center">About</h2>
+        <p>The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>
+            <strong>The Chef?</strong>
+            Mr. Italiano himself
+        </p>
+        <img src="img/chef.jpg" class="right circle" style="width:150px;" alt="Chef">
+        <p>We are proud of our interiors.</p>
+        <img src="img/interior.jpg" style="width:100%" alt="Interior">
+        <h3><b>Opening Hours</b></h3>
+        <div class="clearfix">
+            <div class="left half">
+                <p>Mon & Tue CLOSED</p>
+                <p>Wednesday 10.00 - 24.00</p>
+                <p>Thursday 10:00 - 24:00</p>
+            </div>
+            <div class="right half">
+                <p>Friday 10:00 - 12:00</p>
+                <p>Saturday 10:00 - 23:00</p>
+                <p>Sunday Closed</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--LOCATION-->
+<div id="googleMap" class="googlemaps">
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(55.724453, 21.126722),
+                zoom: 15
+            };
+            var kmtp = {lat: 55.724453, lng: 21.126722};
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var marker = new google.maps.Marker({position: kmtp, map: map})
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMRwSLQj4XSMvVssjgRoLOvX3_vmRUHSc&callback=myMap"></script>
+</div>
+<div id="contact-us" class="container-2 bg-blue">
+    <div class="content text-white">
+        <h2>Contact</h2>
+        <p>Find us at some address at some place or call us at 05050515-122330</p>
+        <p>
+        <span class="tag-black">FYI!</span> We offer full-service catering for any event, large or small. We understand
+        your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.
+        </p>
+        <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+        <form action="#">
+            <p>
+                <input class="input" type="text" placeholder="Name" required name="Name">
+            </p>
+            <p>
+                <input class="input" type="number" placeholder="How many people" required name="People">
+            </p>
+            <p>
+                <input class="input" type="datetime-local" placeholder="2019-05-23" required name="Date">
+            </p>
+            <p>
+                <input class="input" type="text" placeholder="Message/Special requirements" required name="Name">
+            </p>
+            <p>
+                <button class="button" type="submit">
+                    SEND MESSAGE
+                </button>
+            </p>
+        </form>
+    </div>
+</div>
+<footer class="container-2 bg-black text-white text-center">
+    <h3>Powered by w3.css</h3>
+</footer>
 </body>
 </html>
