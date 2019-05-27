@@ -6,5 +6,21 @@
     width: 20%
 }
 .container {
-    max-width: 960px;!important;
+    max-width: 980px;
+
+}
+.navbar-nav > .nav-item > .nav-link > li > a {
+    color: grey;
+}
+
+a {
+    color: #ff9900;
+}
+.navbar-nav li a {
+    color: grey
+
+}
+
+.categories li a {
+
 }
