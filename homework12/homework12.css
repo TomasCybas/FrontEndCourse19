@@ -11,10 +11,9 @@
 a {
     color: #ff9900;
 }
-.navbar-nav li a {
-    color: grey
+ul {
+    padding: 0;
 }
-
 .categories li a {
     color: grey;
 }
