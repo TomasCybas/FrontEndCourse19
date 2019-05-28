@@ -7,9 +7,6 @@
 .container {
     max-width: 980px;
 }
-.navbar-nav > .nav-item > .nav-link > li > a {
-    color: grey;
-}
 
 a {
     color: #ff9900;
