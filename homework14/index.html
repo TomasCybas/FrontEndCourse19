@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trikampis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <form class="col-6" onsubmit="return false">
+            <div class="form-group text-center">
+                <label for="a">Trikampio kraštinė</label>
+                <input type="number" class="form-control" placeholder="Kraštinės ilgis" id="a">
+            </div>
+            <div class="form-group text-center">
+                <label for="b">Trikampio kraštinė</label>
+                <input type="number" class="form-control" placeholder="Kraštinės ilgis" id="b">
+            </div>
+            <div class="form-group text-center">
+                <label for="c">Trikampio kraštinė</label>
+                <input type="number" class="form-control" placeholder="Kraštinės ilgis" id="c">
+            </div>
+            <div class="text-center">
+                <button onclick ="calc()" type="submit" class="justify-content-center align-items-center btn btn-primary">Skaičiuoti</button>
+            </div>
+
+        </form>
+        <div id="type" class="col-3">
+
+        </div>
+        <div id="result" class="col-3">
+
+        </div>
+    </div>
+</div>
+<script src="js/scripts.js"></script>
+</body>
+</html>
