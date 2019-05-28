@@ -1,13 +1,11 @@
 .bg-black {
     background: black;
 }
-
 .w-20 {
     width: 20%
 }
 .container {
     max-width: 980px;
-
 }
 .navbar-nav > .nav-item > .nav-link > li > a {
     color: grey;
@@ -18,9 +16,14 @@ a {
 }
 .navbar-nav li a {
     color: grey
-
 }
 
 .categories li a {
-
+    color: grey;
+}
+.categories li {
+    border-bottom: 1px grey dotted;
+}
+.img-thumbnail {
+    border-radius: 0;
 }
