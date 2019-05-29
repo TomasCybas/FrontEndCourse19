@@ -1,0 +1,18 @@
+.cell-white {
+    background: #fff;
+    width: 80px;
+    height: 80px;
+}
+.cell-black {
+    background: grey;
+    width: 80px;
+    height: 80px;
+}
+.table {
+    width: auto;
+    margin: 0 auto;
+}
+
+td img {
+    width: 100%;
+}
