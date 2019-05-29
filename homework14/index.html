@@ -7,7 +7,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
-<body>
+<body onload="display()">
 <div class="container h-100">
     <div class="row h-100 justify-content-center align-items-center">
         <form class="col-6" onsubmit="return false">
@@ -24,7 +24,9 @@
                 <input type="number" class="form-control" placeholder="Kraštinės ilgis" id="c">
             </div>
             <div class="text-center">
-                <button onclick ="calc()" type="submit" class="justify-content-center align-items-center btn btn-primary">Skaičiuoti</button>
+                <button onclick="calc()" type="submit"
+                        class="justify-content-center align-items-center btn btn-primary">Skaičiuoti
+                </button>
             </div>
 
         </form>
@@ -35,6 +37,30 @@
 
         </div>
     </div>
+</div>
+<br>
+<br>
+<div class="container col-6">
+    <table class="table table-bordered text-center">
+        <thead class="thead-dark">
+        <tr>
+            <th>Data</th>
+            <th>Valst. numeris</th>
+            <th>Kelias</th>
+            <th>Laikas</th>
+            <th>Greitis km/h</th>
+        </tr>
+        </thead>
+
+        <tr>
+            <td id="date"></td>
+            <td id="plate"></td>
+            <td id="distance"></td>
+            <td id="time"></td>
+            <td id="speed"></td>
+        </tr>
+    </table>
+
 </div>
 <script src="js/scripts.js"></script>
 </body>
