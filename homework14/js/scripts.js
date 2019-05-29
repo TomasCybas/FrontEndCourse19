@@ -29,6 +29,7 @@ function calc() {
 
     } else {
         document.getElementById('result').innerHTML = "Trikampis negalimas";
+        document.getElementById('type').innerHTML = " ";
     }
 }
 
@@ -51,3 +52,5 @@ function display() {
     document.getElementById("time").innerHTML = car[3];
     document.getElementById("speed").innerHTML = carSpeed();
 }
+
+
