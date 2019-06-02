@@ -23,8 +23,10 @@
             <td class="cell-black"></td>
             <td class="cell-white"></td>
             <td class="cell-black"></td>
-            <td class="cell-white"></td>
-            <td class="cell-black"></td>
+            <td id="B" class="cell-white" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td id="A" class="cell-black" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <i id="pawn" draggable="true" ondragstart="drag(event)" class="fas fa-chess-pawn piece-w text-center"></i>
+            </td>
 
         </tr>
         <tr>
