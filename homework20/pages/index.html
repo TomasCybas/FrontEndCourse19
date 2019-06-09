@@ -20,49 +20,53 @@
             <th>Greitis, km/h</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="cars_table">
         <!--Filled by JS -->
         </tbody>
     </table>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#carsFormModal">
         Sukurti naują įrašą
     </button>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="carsFormModal" tabindex="-1" role="dialog" aria-labelledby="carsFormModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Automobilio kleionės lapas</h5>
+                    <h5 class="modal-title" id="carsFormModalLabel">Automobilio kleionės lapas</h5>
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="form-group">
+                    <form id="cars_form" class="form-group">
                         <label for="date">Data</label>
                         <input type="date" required class="form-control" id="date">
-                        <label for="num_plate">Valst. numeris</label>
+                        <label for="num_plate">Automobilio valstybinis numeris</label>
                         <input type="text" required class="form-control"
-                               placeholder="Įveskite automobilio valstybinį numerį" id="num_plate">
+                               placeholder="PVZ: LRS123" pattern="[A-Z]{3}[1-9]{3}"
+                               id="num_plate">
                         <label for="distance">Nuvažiuotas kelias metrais</label>
                         <input type="number" required class="form-control"
                                placeholder="Įveskite nuvažiuotą kelią metrais" id="distance">
                         <label for="travel_time">Kelionės trukmė sekundėmis</label>
                         <input type="number" required class="form-control"
                                placeholder="Įveskite kelionės trukmę sekundėmis" id="travel_time">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="addCar()">Save changes</button>
-                </div>
+
             </div>
         </div>
     </div>
 </div>
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
