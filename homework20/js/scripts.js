@@ -29,7 +29,8 @@ function addCar() {
     carData.push(car);
     console.log(carData);
     console.log(car);
-    displayData(carData)
+    displayData(carData);
+
 }
 
 function displayData(carData) {
@@ -42,12 +43,36 @@ function displayData(carData) {
                 html += '<td>' + element[i] + '</td>'
             }
         }
-        html += '<td>' + '<button type="button" class="btn btn-primary btn-sm">Redaguoti įrašą</button>' + '</td>' +
-            '<td>' + '<button type="button" class="btn btn-danger btn-sm">Ištrinti įrašą</button>' + '</td>' + '</tr>';
+        html += '<td>' + '<button type="button" class="btn btn-primary btn-sm edit">Redaguoti įrašą</button>' +
+            '</td>' + '<td>' + '<button type="button" class="btn btn-danger btn-sm delete">Ištrinti įrašą</button>' +
+            '</td>' + '</tr>';
     });
     document.getElementById('cars_table').innerHTML = html;
+    getButtons();
 }
 
+
+function getButtons(){
+    var editButtons = document.getElementsByClassName('edit');
+    for (let i = 0; i < editButtons.length; i++) {
+        editButtons[i].addEventListener('click', function () {
+            editData()
+        })
+    }
+    var deleteButtons = document.getElementsByClassName('delete');
+    for (let i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', function (){
+            deleteData();
+        })
+
+    }
+}
+//
+/*function deleteData() {
+    carData.splice(0,1);
+    console.log(carData);
+    displayData(carData);
+}*/
 
 
 
