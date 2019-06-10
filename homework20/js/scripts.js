@@ -51,31 +51,36 @@ function displayData(carData) {
     getButtons();
 }
 
+var delBtnIndex = null;
+var editBtnIndex = null;
 
 function getButtons(){
     var editButtons = document.getElementsByClassName('edit');
     for (let i = 0; i < editButtons.length; i++) {
         editButtons[i].addEventListener('click', function () {
             editData()
-        })
+        });
+        editBtnIndex = editButtons.length - 1;
     }
     var deleteButtons = document.getElementsByClassName('delete');
     for (let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', function (){
             deleteData();
-        })
-
+        });
+        delBtnIndex = deleteButtons.length - 1;
     }
 }
 //
-/*function deleteData() {
-    carData.splice(0,1);
+function deleteData() {
+    carData.splice(delBtnIndex,1);
     console.log(carData);
     displayData(carData);
-}*/
+}
 
 
+function editData() {
 
+}
 
 
 
