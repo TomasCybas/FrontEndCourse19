@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-<!-- Button trigger modal -->
 <div class="container">
     <table class="table col-12 mx-auto">
         <thead>
@@ -24,7 +23,7 @@
         <!--Filled by JS -->
         </tbody>
     </table>
-
+    <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#carsFormModal">
         Sukurti naują įrašą
     </button>
@@ -64,8 +63,23 @@
             </div>
         </div>
     </div>
-</div>
-
+    <!--DELETE CONFIRM MODAL-->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteConfirmModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Atšaukti</button>
+                    <button type="button" class="btn btn-danger">Ištrinti</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

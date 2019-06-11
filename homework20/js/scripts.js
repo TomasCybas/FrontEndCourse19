@@ -1,17 +1,19 @@
 'use strict';
 
 var carData = [];
+var entryId = 0;
 
 document.getElementById("cars_form").addEventListener("submit", function (e) {
     e.preventDefault();
     addCar();
     $('#carsFormModal').modal('hide')
-    .on('hidden.bs.modal', function () { //resets modal form values
-        $(this).find('form').trigger('reset');
-    })
+        .on('hidden.bs.modal', function () { //resets modal form values
+            $(this).find('form').trigger('reset');
+        })
 });
 
-function Car(date, nr, s, t) {
+function Car(id, date, nr, s, t) {
+    this.entryId = id;
     this.date = date;
     this.numberPlate = nr;
     this.travelDistance = s;
@@ -20,70 +22,91 @@ function Car(date, nr, s, t) {
 }
 
 function addCar() {
-    let car = new Car(
+    var car = new Car(
+        entryId.toString(),
         document.getElementById("date").value,
         document.getElementById("num_plate").value,
         document.getElementById("distance").value,
         document.getElementById("travel_time").value,
     );
     carData.push(car);
-    console.log(carData);
-    console.log(car);
-    displayData(carData);
+    entryId++;
+    displayData();
 
 }
 
-function displayData(carData) { //draws HTML table
+function displayData() {
     let html = "";
-    let entryId = 0;
-    carData.forEach(function (element) {
-        html += '<tr ' + 'id=' + '"' + entryId++ + '"' + '>';
-        for (let i in element) {
-            if (element.hasOwnProperty(i)) {
-                html += '<td>' + element[i] + '</td>'
-            }
-        }
-        html += '<td>' + '<button type="button" class="btn btn-primary btn-sm edit">Redaguoti įrašą</button>' +
-            '</td>' + '<td>' + '<button type="button" class="btn btn-danger btn-sm delete">Ištrinti įrašą</button>' +
-            '</td>' + '</tr>';
-    });
+    for (let i = 0; i < carData.length; i++) {
+        let item = carData[i];
+        html += '<tr data-car-id="' + entryId + '"> ' +
+            '<td>' + item.date + '</td>' +
+            '<td>' + item.numberPlate + '</td>' +
+            '<td>' + item.travelDistance + '</td>' +
+            '<td>' + item.travelTime + '</td>' +
+            '<td>' + item.speed + '</td>' +
+            '<td><button type="button" class="btn btn-primary btn-sm edit"  data-car-item-id="' + item.entryId +
+            '">Redaguoti įrašą</button></td>' +
+            '<td><button type="button" class="btn btn-danger btn-sm delete" data-toggle="modal" data-target="#deleteConfirmModal" data-car-item-id="' + item.entryId +
+            '">Ištrinti įrašą</button></td>' +
+            '</tr>'
+    }
     document.getElementById('cars_table').innerHTML = html;
-    getButtons();
+    addEventListeners();
 }
 
-var delBtnIndex = null; //index of Delete button
-var editBtnIndex = null; //index of Edit button
-
-function getButtons(){ //adds event listeners and gets button indexes
-    var editButtons = document.getElementsByClassName('edit');
-    for (let i = 0; i < editButtons.length; i++) {
-        editButtons[i].addEventListener('click', function () {
-            editData()
+function addEventListeners() {
+    //Handle edit events
+    var editElements = document.getElementsByClassName('edit');
+    for (let i = 0; i < editElements.length; i++) {
+        var elm = editElements[i];
+        elm.addEventListener('click', function (e) {
+            e.preventDefault();
+            editData(this.getAttribute('data-car-item-id'));
+            return false
         });
-        editBtnIndex = editButtons.length - 1;
     }
-    var deleteButtons = document.getElementsByClassName('delete');
-    for (let i = 0; i < deleteButtons.length; i++) {
-        deleteButtons[i].addEventListener('click', function (){
-            deleteData();
+    //Handle delete events
+    var deleteElements = document.getElementsByClassName('delete');
+    for (let i = 0; i < deleteElements.length; i++) {
+        let elm = deleteElements[i];
+        elm.addEventListener('click', function (e) {
+            e.preventDefault();
+            deleteData(this.getAttribute('data-car-item-id'));
+            return false
         });
-        delBtnIndex = deleteButtons.length - 1;
     }
-}
 
-function deleteData(delBtnIndex, carData) { //deletes entry by index and redraws table
-    carData.splice(delBtnIndex, 1);
-    console.log(carData);
-    displayData(carData);
-}
-
-function editData() {
-
-    carData.splice(editBtnIndex, 1, )
 
 }
 
+function getCarItem(id) {
+    var carItem = null;
+    for (let i = 0; i < carData.length; i++) {
+        var item = carData[i];
+        if (item.entryId === id) {
+            carItem = item;
+            break;
+        }
+    }
+    return carItem;
 
 
+}
+
+function deleteData(id) { //deletes entry by index and redraws table;
+    let index = carData.findIndex(car => car.entryId === id);
+    carData.splice(index, 1);
+    displayData();
+}
+
+function editData(id) {
+    let item = getCarItem(id);
+
+}
 
 
+/*<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button>*/
