@@ -33,7 +33,7 @@ function addCar() {
 
 }
 
-function displayData(carData) {
+function displayData(carData) { //draws HTML table
     let html = "";
     let entryId = 0;
     carData.forEach(function (element) {
@@ -51,10 +51,10 @@ function displayData(carData) {
     getButtons();
 }
 
-var delBtnIndex = null;
-var editBtnIndex = null;
+var delBtnIndex = null; //index of Delete button
+var editBtnIndex = null; //index of Edit button
 
-function getButtons(){
+function getButtons(){ //adds event listeners and gets button indexes
     var editButtons = document.getElementsByClassName('edit');
     for (let i = 0; i < editButtons.length; i++) {
         editButtons[i].addEventListener('click', function () {
@@ -70,15 +70,16 @@ function getButtons(){
         delBtnIndex = deleteButtons.length - 1;
     }
 }
-//
-function deleteData() {
-    carData.splice(delBtnIndex,1);
+
+function deleteData(delBtnIndex, carData) { //deletes entry by index and redraws table
+    carData.splice(delBtnIndex, 1);
     console.log(carData);
     displayData(carData);
 }
 
-
 function editData() {
+
+    carData.splice(editBtnIndex, 1, )
 
 }
 
