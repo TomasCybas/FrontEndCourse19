@@ -19,4 +19,13 @@ td img {
 td i {
     width: 100%;
     font-size: 50px;
+    text-align: center;
+    opacity: 0.99;
 }
+
+i.white {
+    color: white;
+}
+ th {
+     user-select: none;
+ }
