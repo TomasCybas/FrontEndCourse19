@@ -20,20 +20,26 @@ function Car(id, date, nr, s, t) {
     this.travelTime = t;
     this.speed = (this.travelDistance / this.travelTime * 3.6).toFixed(2);
 }
-
+var inputDate = document.getElementById("date");
+var inputNumPlate = document.getElementById("num_plate");
+var inputDistance = document.getElementById("distance");
+var inputTravelTime = document.getElementById("travel_time");
 function addCar() {
     var car = new Car(
         entryId.toString(),
-        document.getElementById("date").value,
-        document.getElementById("num_plate").value,
-        document.getElementById("distance").value,
-        document.getElementById("travel_time").value,
+        inputDate.value,
+        inputNumPlate.value,
+        inputDistance.value,
+        inputTravelTime.value,
     );
     carData.push(car);
     entryId++;
+    console.log(carData);
     displayData();
 
 }
+
+
 
 function displayData() {
     let html = "";
@@ -45,9 +51,9 @@ function displayData() {
             '<td>' + item.travelDistance + '</td>' +
             '<td>' + item.travelTime + '</td>' +
             '<td>' + item.speed + '</td>' +
-            '<td><button type="button" class="btn btn-primary btn-sm edit"  data-car-item-id="' + item.entryId +
+            '<td><button type="button" class="btn btn-primary btn-sm edit" data-car-item-id="' + item.entryId +
             '">Redaguoti įrašą</button></td>' +
-            '<td><button type="button" class="btn btn-danger btn-sm delete" data-toggle="modal" data-target="#deleteConfirmModal" data-car-item-id="' + item.entryId +
+            '<td><button type="button" class="btn btn-danger btn-sm delete" data-car-item-id="' + item.entryId +
             '">Ištrinti įrašą</button></td>' +
             '</tr>'
     }
@@ -96,14 +102,37 @@ function getCarItem(id) {
 
 function deleteData(id) { //deletes entry by index and redraws table;
     let index = carData.findIndex(car => car.entryId === id);
-    carData.splice(index, 1);
-    displayData();
+    if (confirm("Ar tikrai norite ištrinti?")){
+        carData.splice(index, 1);
+        displayData();
+    }
+    return false;
+
 }
 
 function editData(id) {
     let item = getCarItem(id);
-
+    $('#carsFormModal').modal()
+        .on('shown.bs.modal', function(){
+            $('#date').val(item.date);
+            $('#num_plate').val(item.numberPlate);
+            $('#distance').val(item.travelDistance);
+            $('#travel_time').val(item.travelTime);
+        })
 }
+
+
+/*function callSubmitModal(){
+    $('#carsFormModal').modal();
+    $('#cars_form').on('submit', function(e){
+        e.preventDefault();
+        addCar();
+            })
+        .on('hidden.bs.modal', function () { //resets modal form values
+            $(this).find('form').trigger('reset');
+        })
+
+}*/
 
 
 /*<!-- Button trigger modal -->
